@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('codigo')->unique();
             $table->string('tipo')->nullable(false);
             $table->text('descricao');
-            $table->boolean('status')->default(true);
+            $table->boolean('status')->default(true)->nullable(true);
             $table->foreign('ambiente_id')->references('id')->on('ambientes');
             $table->timestamps();
         });
